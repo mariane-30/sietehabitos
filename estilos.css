@@ -1,0 +1,102 @@
+h1 {
+    font-family: 'Pacifico', cursive;
+ }
+
+ p {
+    font-family: 'Pacifico', cursive;
+    font-size: 30px;
+ }
+ 
+ .barra {
+   background-color: rgb(255, 255, 255);
+}
+
+.barra ul {
+   list-style: none;
+}   
+
+.barra ul li {
+   display: inline-block;
+}
+
+.barra ul li a {
+   text-decoration: none;
+   display: block;
+   color: white;
+   padding: 30px;
+}
+
+.barra ul li a:hover {
+   background-color: rgb(192, 204, 203);
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: rgb(192, 204, 203);
+}
+
+.contenedor {
+    width: 90%;
+    max-width: 1700px;
+    margin: 20px auto;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, auto);
+}
+
+.contenedor > div {
+    background-color: lavender;
+    padding: 20px;
+    border-radius: 4px;
+}
+
+.contenedor header {
+    background-color: lavender;
+    color: black;
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+
+.contenedor .contenido {
+    grid-column: span 2;
+    background-color: lavender;
+}
+
+.contenedor .sidebar{
+    background-color: lavender;
+    grid-row: span 2;
+}
+
+.contenedor .widget-1,
+.contenedor .widget-2 {
+    background-color: lavender;
+    color: black;
+}
+
+.contenedor .footer {
+    background-color: lavender;
+    color: black;
+    grid-column: span 3;
+}
+
+@media screen and (max-width: 768px){
+    body {
+        background-color: black;
+    }
+
+    .contenedor .contenido {
+        grid-column: 1 / -1;
+    }
+
+    .contenedor .sidebar {
+        grid-column: 1 / -1;
+    }
+
+    .contenedor .widget-1 {
+        grid-column: span 2;
+    }
+}
